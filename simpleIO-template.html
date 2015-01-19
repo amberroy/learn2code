@@ -9,8 +9,14 @@
 <script>
 // ---------- simpleIO begin ---------- 
 // simpleIO by Amber Roy github.com/amberroy/learn2code
-function input(text) {
+function inputText(text) {
 	var userInput = prompt(text);
+	output(text);
+	output("> " + userInput);
+	return userInput;
+}
+function inputNum(text) {
+	var userInput = Number(prompt(text));
 	output(text);
 	output("> " + userInput);
 	return userInput;
@@ -23,8 +29,8 @@ function output(text) {
 
 
 // REPLACE below with your Javascript
-var name = input("hello there! what is your name?");
-var age = input("how old are you " + name + "?");
+var name = inputText("hello there! what is your name?");
+var age = inputNum("how old are you " + name + "?");
 if (age > 30) {
 	output("wow you are old");
 } else {
